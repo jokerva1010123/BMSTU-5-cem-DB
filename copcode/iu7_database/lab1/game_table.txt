@@ -1,0 +1,181 @@
+id Игры,Название,Жанр,id Разработчика,id Платформы,Год выпуска,Цена,id Клиента
+1,S.T.A.L.K.E.R. 2,Shooter,42,95,2020,3412,17
+2,Starfield,Platform,42,33,2020,2088,115
+3,The Elder Scrolls VI,Platform,53,5,2015,4765,61
+4,Grand Theft Auto VI,Platform,48,11,2017,4051,88
+5,Cyberpunk 2077,Sports,2,54,2014,4726,73
+6,Control,Strategy,158,35,2015,4186,83
+7,DOOM Eternal,Adventure,128,103,2021,1194,9
+8,Halo: Infinite,Adventure,139,37,2018,3750,97
+9,Ghost of Tsushima,Strategy,148,72,2014,1849,21
+10,Biomutant,Shooter,141,79,2015,3664,51
+11,Ori and the Will of the Wisps,Simulation,12,1,2014,1413,28
+12,Gears of War 5,Sports,165,24,2018,3242,121
+13,Death Stranding,Action,46,78,2015,4152,44
+14,Dying Light 2,Shooter,86,81,2014,1851,62
+15,The Last of Us 2,Adventure,161,76,2021,2795,43
+16,Beyond Good & Evil 2,Action,112,49,2014,4297,116
+17,Skull & Bones,Platform,76,77,2016,2190,19
+18,RAGE 2,Sports,55,102,2016,3746,43
+19,Sekiro: Shadows Die Twice,Strategy,172,6,2015,4303,113
+20,Tom Clancy's The Division 2,Action,54,20,2015,4766,113
+21,Devil May Cry 5,Simulation,129,62,2019,4789,47
+22,Crackdown 3,Simulation,131,25,2017,2238,114
+23,Metro: Exodus,Action,17,69,2020,3960,99
+24,Anthem,Shooter,130,73,2021,1481,44
+25,Days Gone,Fighting,172,103,2018,3045,76
+26,Dead or Alive 6,Racing,68,24,2018,4107,58
+27,Resident Evil 2,Strategy,175,83,2021,3852,59
+28,Concrete Genie,Racing,76,21,2014,3031,48
+29,Insurgency: Sandstorm,Fighting,40,31,2018,1276,114
+30,Super Smash Bros,Puzzle,141,41,2016,4949,15
+31,Just Cause 4,Fighting,146,84,2018,4977,111
+32,Artifact,Platform,18,14,2014,3121,43
+33,Darksiders 3,Fighting,127,70,2017,3993,118
+34,Battlefield V,Simulation,117,52,2015,3251,34
+35,Fallout 76,Racing,102,78,2016,4303,87
+36,HITMAN 2,Shooter,162,16,2015,1979,115
+37,Overkill's The Walking Dead,Fighting,161,44,2017,3271,84
+38,Red Dead Redemption 2,Racing,53,96,2014,4345,118
+39,Soulcalibur VI,Sports,153,51,2015,3392,58
+40,Call of Duty: Black Ops 4,Adventure,67,82,2015,1698,73
+41,Assassin's Creed: Odyssey,Adventure,54,56,2016,1759,8
+42,Forza Horizon 4,Adventure,26,24,2014,2091,107
+43,Life is Strange 2,Action,71,26,2021,3074,115
+44,Shadow of the Tomb Raider,Adventure,116,95,2015,1249,2
+45,Spider-Man,Racing,80,58,2016,2480,4
+46,Green Hell,Shooter,114,64,2016,2732,73
+47,SCUM,Sports,89,1,2019,4258,3
+48,Fear the Wolves,Role-playing,117,89,2017,4548,4
+49,Strange Brigade,Sports,69,103,2016,4152,112
+50,The Crew 2,Sports,76,31,2017,1701,115
+51,The Awesome Adventures of Captain Spirit,Adventure,56,21,2019,3553,51
+52,Jurassic World Evolution,Simulation,32,9,2021,3882,4
+53,Unravel Two,Action,93,77,2017,3274,62
+54,Vampyr,Adventure,64,23,2015,4569,86
+55,Agony,Action,157,78,2014,3705,30
+56,Detroit: Become Human,Simulation,72,89,2015,2874,62
+57,State of Decay 2,Action,41,27,2019,1115,49
+58,God of War,Puzzle,155,82,2014,1991,67
+59,Yakuza 6: The Song of Life,Shooter,118,22,2020,4658,104
+60,Extinction,Racing,58,77,2014,2868,82
+61,Far Cry 5,Role-playing,22,67,2016,4282,106
+62,A Way Out,Role-playing,101,49,2021,4508,94
+63,Sea of Thieves,Shooter,61,100,2021,1238,38
+64,Warhammer: Vermintide 2,Racing,30,77,2015,1837,22
+65,H1Z1,Role-playing,34,91,2021,2892,110
+66,Metal Gear Survive,Role-playing,90,43,2016,2444,89
+67,Hunt: Showdown,Simulation,164,7,2019,2973,53
+68,Kingdom Come: Deliverance,Role-playing,138,29,2018,3578,18
+69,Monster Hunter: World,Platform,55,22,2021,2391,37
+70,Playerunknown's Battlegrounds,Simulation,81,45,2014,2871,42
+71,Star Wars: Battlefront 2,Role-playing,130,100,2014,4217,45
+72,Need for Speed: Payback,Fighting,20,53,2016,3423,120
+73,Call of Duty: WWII,Racing,154,91,2019,2820,117
+74,Wolfenstein II: The New Colossus,Adventure,20,24,2017,4400,1
+75,Assassin's Creed: Origins,Role-playing,20,51,2017,2747,45
+76,Gran Turismo Sport,Adventure,179,60,2021,2547,45
+77,ELEX,Adventure,149,35,2019,4490,102
+78,South Park: The Fractured but Whole,Action,176,57,2019,4872,113
+79,The Evil Within 2,Strategy,106,21,2020,1499,7
+80,Middle-Earth: Shadow of War,Strategy,27,46,2017,4223,10
+81,FIFA 18,Puzzle,108,20,2018,4408,24
+82,Forza Motorsport 7,Racing,8,97,2016,2663,75
+83,Cuphead,Action,9,74,2019,4527,60
+84,Total War: Warhammer II,Action,22,72,2020,4164,23
+85,Project CARS 2,Puzzle,171,6,2016,1111,99
+86,Marvel vs. Capcom: Infinite,Puzzle,163,55,2014,1281,91
+87,Dishonored: Death of the Outsider,Action,111,31,2014,2952,58
+88,Destiny 2,Platform,176,45,2020,3177,28
+89,Life is Strange: Before the Storm,Fighting,91,15,2018,4079,105
+90,Uncharted: The Lost Legacy,Sports,17,59,2020,2083,98
+91,Agents of Mayhem,Action,90,55,2019,4493,38
+92,LawBreakers,Fighting,130,4,2019,2395,80
+93,Hellblade: Senua's Sacrifice,Role-playing,53,52,2014,3881,6
+94,Fortnite,Platform,177,17,2018,1965,67
+95,Get Even,Platform,48,61,2016,1094,2
+96,DiRT 4,Sports,96,13,2016,4497,119
+97,Tekken 7,Fighting,24,74,2021,2514,24
+98,Friday the 13th: The Game,Simulation,5,44,2017,3739,4
+99,Injustice 2,Adventure,8,16,2015,4452,43
+100,The Surge,Action,131,42,2014,2121,5
+101,Prey,Adventure,158,60,2014,2651,42
+102,Sniper: Ghost Warrior 3,Simulation,79,1,2015,3529,92
+103,Outlast 2,Adventure,58,40,2016,4535,18
+104,Syberia 3,Platform,111,91,2018,4293,79
+105,Mass Effect: Andromeda,Role-playing,30,75,2016,2562,49
+106,FlatOut 4: Total Insanity,Role-playing,29,81,2019,2600,108
+107,Styx: Shards of Darkness,Sports,16,67,2020,1721,102
+108,NieR: Automata,Fighting,160,32,2020,2352,53
+109,Ghost Recon: Wildlands,Fighting,48,17,2016,3023,45
+110,The Legend of Zelda: Breath of the Wild,Strategy,171,86,2018,1426,18
+111,Horizon: Zero Dawn,Racing,28,100,2019,4910,95
+112,Sniper Elite 4,Fighting,68,60,2014,1766,88
+113,For Honor,Platform,112,65,2020,2250,99
+114,Nioh,Puzzle,132,75,2020,1092,112
+115,Resident Evil 7: Biohazard,Fighting,132,86,2019,2736,97
+116,Dead Rising 4,Adventure,80,97,2015,4493,48
+117,The Last Guardian,Action,162,62,2016,4903,56
+118,Steep,Puzzle,123,43,2021,2864,116
+119,Final Fantasy XV,Strategy,93,93,2019,4805,52
+120,Watch Dogs 2,Role-playing,130,35,2016,1610,86
+121,Dishonored 2,Puzzle,86,8,2018,4633,34
+122,Call of Duty: Infinite Warfare,Role-playing,150,79,2014,4143,54
+123,Titanfall 2,Role-playing,90,97,2018,3125,9
+124,Battlefield 1,Role-playing,64,46,2019,1816,114
+125,Shadow Warrior 2,Simulation,78,19,2020,4231,45
+126,Gears of War 4,Platform,117,94,2018,3859,85
+127,Mafia III,Puzzle,165,46,2017,1540,90
+128,Forza Horizon 3,Racing,154,72,2020,2051,89
+129,ReCore,Simulation,123,35,2019,2965,52
+130,Deus Ex: Mankind Divided,Action,87,22,2017,3199,92
+131,No Man's Sky,Sports,153,91,2018,2947,77
+132,Batman: The Telltale Series,Puzzle,75,50,2015,4267,114
+133,Inside,Racing,52,72,2021,4162,45
+134,LEGO Star Wars: The Force Awakens,Sports,82,46,2016,4320,24
+135,The Technomancer,Puzzle,42,79,2016,4360,109
+136,Resident Evil: Umbrella Corps,Platform,128,6,2019,1482,102
+137,Sherlock Holmes: The Devil's Daughter,Action,106,33,2019,1844,53
+138,Mirror's Edge: Catalyst,Sports,4,3,2017,2691,35
+139,Overwatch,Shooter,165,58,2015,3043,53
+140,Homefront: The Revolution,Role-playing,65,11,2019,3130,71
+141,DOOM,Sports,81,4,2014,1514,98
+142,Uncharted 4,Sports,141,27,2017,1728,99
+143,Dark Souls 3,Role-playing,52,71,2017,4967,119
+144,Quantum Break,Strategy,90,60,2020,1415,10
+145,HITMAN,Puzzle,92,64,2014,1683,56
+146,Tom Clancy's The Division,Platform,145,76,2016,3281,54
+147,Far Cry: Primal,Puzzle,72,53,2014,2681,86
+148,Plants vs. Zombies: Garden Warfare 2,Sports,85,85,2014,1656,80
+149,Unravel,Action,133,9,2019,2596,3
+150,Assassin's Creed Chronicles: Russia,Puzzle,170,91,2017,2875,14
+151,Firewatch,Shooter,168,87,2019,1505,118
+152,XCOM 2,Platform,63,81,2019,2903,114
+153,LEGO: Marvel's Avengers,Racing,106,99,2021,3142,104
+154,The Witness,Shooter,115,98,2019,4127,4
+155,Just Cause 3,Action,164,7,2019,2677,86
+156,Tom Clancy's Rainbow Six: Siege,Strategy,108,41,2015,3958,32
+157,Star Wars: Battlefront,Racing,144,73,2015,2519,59
+158,Rise of the Tomb Raider,Adventure,38,39,2020,4216,49
+159,Fallout 4,Simulation,105,28,2020,1731,12
+160,Call of Duty: Black Ops 3,Shooter,156,51,2019,2293,1
+161,Need for Speed,Adventure,120,23,2016,2630,16
+162,Halo 5: Guardians,Sports,161,26,2015,1617,116
+163,Assassin's Creed: Syndicate,Role-playing,167,37,2017,1601,39
+164,SOMA,Racing,60,88,2015,4580,55
+165,Forza Motorsport 6,Shooter,140,79,2014,1064,49
+166,Metal Gear Solid V: The Phantom Pain,Role-playing,167,50,2019,4426,20
+167,Mad Max,Sports,47,44,2019,3978,41
+168,Until Dawn,Shooter,54,4,2018,3244,64
+169,Batman: Arkham Knight,Adventure,122,9,2017,2250,56
+170,Fallout: Shelter,Shooter,172,102,2020,4887,5
+171,Heroes of the Storm,Strategy,136,46,2020,4035,118
+172,The Witcher 3: Wild Hunt,Simulation,25,81,2018,3785,52
+173,Project CARS,Platform,83,23,2015,2284,28
+174,Mortal Kombat X,Shooter,170,76,2016,1286,77
+175,Bloodborne,Shooter,31,99,2019,1988,49
+176,Battlefield: Hardline,Shooter,97,32,2015,1312,64
+177,Ori And The Blind Forest,Strategy,22,31,2014,4403,14
+178,Hotline Miami 2: Wrong Number,Racing,76,103,2014,1420,46
+179,Resident Evil: Revelations 2,Adventure,44,47,2017,4445,72
+180,The Order: 1886,Racing,136,6,2017,4297,40

@@ -1,0 +1,77 @@
+USE MASTER
+GO
+
+IF NOT EXISTS (
+    SELECT NAME
+        FROM SYS.DATABASES
+        WHERE NAME = N'SHOP_GAMES'
+) 
+
+CREATE DATABASE SHOP_GAMES;
+GO
+USE SHOP_GAMES;
+GO
+
+
+IF OBJECT_ID('dbo.Client', 'U') IS NOT NULL
+DROP TABLE dbo.Client
+GO
+
+CREATE TABLE dbo.Client
+(
+    ClId INT NOT NULL PRIMARY KEY,
+    ClName    NVARCHAR(20) NOT NULL,
+    ClSurname NVARCHAR(20) NOT NULL,
+    ClPhone  NVARCHAR(11) NOT NULL,
+    ClAge INT NOT NULL
+)
+
+
+IF OBJECT_ID('dbo.Developer', 'U') IS NOT NULL
+DROP TABLE dbo.Developer
+GO
+
+CREATE TABLE dbo.Developer
+(
+    DevId INT NOT NULL PRIMARY KEY,
+    DevTitle   NVARCHAR(30) NOT NULL,
+    DevCountry NVARCHAR(30) NOT NULL
+)
+
+
+IF OBJECT_ID('dbo.Platform', 'U') IS NOT NULL
+DROP TABLE dbo.Platform
+GO
+
+CREATE TABLE dbo.Platform
+(
+    PlId INT NOT NULL PRIMARY KEY,
+    PlTitle     NVARCHAR(30) NOT NULL,
+    PlDeveloper NVARCHAR(40) NOT NULL,
+    PlYear      INT NOT NULL
+)
+
+
+IF OBJECT_ID('dbo.Game', 'U') IS NOT NULL
+DROP TABLE dbo.Game
+GO
+
+CREATE TABLE dbo.Game
+(
+    GId INT NOT NULL PRIMARY KEY,
+    GTitle NVARCHAR(40) NOT NULL,
+    GGenre NVARCHAR(20) NOT NULL,
+    DevId  INT NOT NULL,
+    PlId   INT NOT NULL,
+    GYear  INT NOT NULL,
+    GPrice INT NOT NULL,
+    ClId   INT NOT NULL
+
+    CONSTRAINT FK_DevId FOREIGN KEY(DevId)
+    REFERENCES Developer(DevId),
+    CONSTRAINT FK_PlId FOREIGN KEY(PlId)
+    REFERENCES Platform(PlId),
+    CONSTRAINT FK_ClId FOREIGN KEY(ClId)
+    REFERENCES Client(ClId)
+)
+GO

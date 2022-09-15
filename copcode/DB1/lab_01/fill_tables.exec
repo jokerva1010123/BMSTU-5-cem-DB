@@ -1,0 +1,32 @@
+#!/bin/bash
+echo
+Echo FILL_PARENT:
+python3 ./CDI/fill_parents.py
+echo DONE
+echo
+Echo FILL_GROUP:
+python3 ./CDI/fill_groups.py
+echo DONE
+echo
+Echo FILL_CHILD:
+python3 ./CDI/fill_child.py
+echo DONE
+echo
+Echo FILL_INSTITUTION:
+python3 ./CDI/fill_institution.py
+echo DONE
+echo
+Echo FILL_EMPLOYEE:
+python3 ./CDI/fill_employee.py
+echo DONE
+echo
+Echo FILL_CONTRACT:
+python3 ./CDI/fill_contract.py
+echo DONE
+echo
+Echo FILL_EMPLOYEE_GROUP:
+python3 ./CDI/fill_empl_group.py
+echo DONE
+echo
+echo COMPLETED
+echo

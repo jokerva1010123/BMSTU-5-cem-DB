@@ -1,0 +1,6 @@
+#!/bin/bash
+echo
+Echo CREATE_TABLES:
+python3 ./CDI/create_tables.py
+echo COMPLETED
+echo

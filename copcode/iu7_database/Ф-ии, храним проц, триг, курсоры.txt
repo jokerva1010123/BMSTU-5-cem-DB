@@ -1,0 +1,137 @@
+1. Функции
+
+CREATE FUNCTION [имя схемы][табл][парам]
+RETURNS [типы|Table]
+[WITH {ENCRYPTION|SCHEMABINDING}]
+
+CREATE FUNCTION dbo.AveragePrice()
+RETURNS smallmoney
+WITH SCHEMABINDING AS BEGIN
+RETURNS (SELECT AVG(Price) FROM dbo.R)
+END;
+
+2. Хранимые процедуры - набор инструкций, элемент кода
+
+CREATE PROCEDURE (CREATE PROC)
+CREATE PROCEDURE ProductSummary as [BEGIN]
+SELECT ProductName as Product, Manufactory
+FROM Products
+end
+
+EXEC ProductSummary
+
+3. Триггеры 
+
+	3.1. AFTER
+	3.2. INSTEAD OF
+	применяются для INSERT, UPDATE, DELETE
+	
+	-- cамый-самый-самый тупой пример добавление строки
+	CREATE TRIGGER AfterUpdSPJ
+	ON SPJ
+	AFTER UPDATE AS BEGIN
+	RAISERROR (N'Произошло обн.', 1, 1)
+	END;
+	
+	CREATE TRIGGER dbo.UpdateTables
+	ON S
+	AFTER UPDATE AS
+	SELECT * FROM inserted
+	SELECT * FROM deleted
+	
+	UPDATE S set Sname = 'Графит'
+	WHERE Sname = 'Алмаз'
+	
+4. Курсоры
+
+нужен для того чтобы пройти по каждой строчке последовательно
+DECLARE имя_курсора CURSOR FOR SELECT текст_запроса
+OPEN имя_кусрора 
+FETCH имя_курсора INTO список_переменных 
+CLOSE имя_курсора
+
+
+
+
+4 типа серверных курсоров:
+1. статический (static)
+2. динамические (dynamic)
+3. курсоры управляемые набором ключей (keyset)
+4. быстрые последовательные курсоры 
+
+
+по области видимости:
+1. локальные
+2. глобальные
+
+
+по способу перемещения: 
+1. последовательные (FORWARD_ONLY) (можем двигаться только вперед)
+2. прокрутки (SCROLL)
+ 
+
+по способу распараллеливания:
+1. READONLY содержимое можно только читать
+2. SCROLL_LOCKS
+3. OPTIMISTIC мы можем читать, можем записывать, пока записывает один, другой тоже может записать
+
+
+
+
+перемещение внутри курсора:
+1. NEXT возвраащет результат который следует за текущей строкой бла бла бла
+2. PRIOR возвращает строку результата на которой непосредственно находится
+3. FIRST
+4. LAST
+5. ABSOLUTE{n|@nvar}  если n или nvar > 0 тогда метод возвращает строку стоящую на n строк дальше от передней границы курсора
+6. RELATIVE{n|@nvar}
+
+
+
+CREATE PROCEDURE [dbo].[MyProcedure] AS
+DECLARE @ID INT
+DECLARE @QUA INT
+DECLARE @VAL VARCHAR (500)
+DECLARE @NAM VARCHAR (500)
+/*Объявляем курсор*/
+DECLARE @CURSOR CURSOR
+/*Заполняем курсор*/
+SET @CURSOR = CURSOR SCROLL
+FOR
+SELECT INDEX, QUANTITY, VALUE, NAME
+FROM My_First_Table WHERE QUANTITY > 1
+/*Открываем курсор*/
+OPEN @CURSOR
+/*Выбираем первую строку*/
+FETCH NEXT FROM @CURSOR INTO @ID, @QUA, @VAL, @NAM
+/*Выполняем в цикле перебор строк*/
+WHILE @@FETCH_STATUS = 0
+BEGIN
+IF NOT EXISTS(SELECT VAL FROM My_Second_Table WHERE ID=@ID)
+BEGIN
+/*Вставляем параметры в третью таблицу если условие соблюдается*/
+INSERT INTO My_Third_Table (VALUE, NAME) VALUE(@VAL, @NAM)
+END
+/*Выбираем следующую строку*/
+FETCH NEXT FROM @CURSOR INTO @ID, @QUA, @VAL, @NAM
+END
+CLOSE @CURSOR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

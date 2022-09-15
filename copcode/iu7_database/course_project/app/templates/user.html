@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <table class="table table-hover">
+    <!-- <tr valign='top'> -->
+    <tr>
+      {% if user.image %}
+        <td width="250px"><img src="data:image/png;base64,{{ user.image }}" style="max-width: 200px;"></td>
+      {% else %}
+        <td width="250px"><img id="anotherImage" src="http://www.youloveit.ru/uploads/posts/2017-05/1494861592_youloveit_ru_kot_pushin04.png" style="max-width: 200px;"></td>
+      {% endif %}
+      <!-- <td valign='middle'> -->
+      <td>
+        <h1>{{ user.username }}</h1>
+        {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+        {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+        <p>{{ user.get_books_count() }} books.</p>
+        {% if user == current_user %}
+          <p><a href="{{ url_for('edit_profile') }}">Редактировать профиль</a></p>
+        {% endif %}
+      </td>
+    </tr>
+  </table>
+  <hr> <!--  цветовая горизонтальная линия -->
+  {% for book in books %}
+  <table class="table table-hover">
+      <tr>
+          <td style="width: 15%">
+            <a href="{{ url_for('book', username=current_user.username, bookid=book.id) }}">
+              {% if book.image %}
+                <img id="anotherImage" src="data:image/png;base64,{{ book.image }}" style="max-width: 100px;">
+              {% else %}
+                <img id="anotherImage" src="http://otkrytki-animacii.1000e.ru/_ph/177/2/472542465.jpg?1568208716" style="max-width: 100px;">
+              {% endif %}
+            </a>
+          </td>
+          <td>
+            Книга:
+            <a href="{{ url_for('book', username=current_user.username, bookid=book.id) }}">
+              {{ book.title }}
+            </a>
+            <br> Автор: {{ book.author }}
+          </td>
+          <td style="width: 5%;"><button type="button" class="btn" id="delete" onclick="delete_status({{ book.id }})"><span class="glyphicon glyphicon-remove"></span></button></td>
+          <script>
+            function delete_status(id) {
+              alert("click");
+              $.ajax({
+                type: "DELETE",
+                url: "http://localhost:5000/delete_status",
+                data: JSON.stringify({"info": {"book_id": id }}),
+                contentType: "application/json; charset=utf-8",
+                success: function(res) {
+                  location.reload();
+                }
+              })
+            }
+          </script>
+      </tr>
+  </table>
+
+  {% endfor %}
+
+
+{% endblock %}

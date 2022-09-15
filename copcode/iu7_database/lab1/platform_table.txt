@@ -1,0 +1,104 @@
+id Платформы,Название,Разработчик,Год выхода
+1,Nintendo Switch,Nintendo,2011
+2,PlayStation VR,Sony Interactive Entertainment,2011
+3,PlayStation 4 Pro,Sony Interactive Entertainment,2018
+4,Steam Machines,Valve Corporation,2008
+5,SteamOS,Valve Corporation,2018
+6,Xbox One,Microsoft,2010
+7,PlayStation 4,Sony Interactive Entertainment,2013
+8,PlayStation Vita TV,Sony Interactive Entertainment,2020
+9,Ouya,OUYA Inc.,2016
+10,Wii U,Nintendo,2014
+11,PlayStation Network,Sony Interactive Entertainment,2015
+12,PlayStation Vita,Sony Interactive Entertainment,2010
+13,iPad,Apple Inc.,2020
+14,PlayStation Network (PSP),Sony Interactive Entertainment,2019
+15,Android,Open Handset Alliance,2011
+16,iOS,Apple Inc.,2014
+17,iPhone,Apple Inc.,2020
+18,Wii,Nintendo,2009
+19,Wii Shop,Nintendo,2016
+20,PlayStation Network (PS3),Sony Interactive Entertainment,2016
+21,PlayStation 3,Sony Interactive Entertainment,2017
+22,Xbox Games Store,Microsoft,2010
+23,Xbox 360,Microsoft,2008
+24,PlayStation Portable,Sony Interactive Entertainment,2010
+25,Xbox,Microsoft,2012
+26,PlayStation 2,Sony Interactive Entertainment,2018
+27,PlayStation,Sony Interactive Entertainment,2019
+28,Sega Master System,Sega Inc.,2019
+29,SuperGrafx,Open Handset Alliance,2020
+30,Sega Pico,Sega Inc.,2011
+31,Sega CD,Sega Inc.,2019
+32,Sega 32X,Sega Inc.,2018
+33,Sharp X1,Open Handset Alliance,2020
+34,Satellaview,Valve Corporation,2018
+35,Saturn,Open Handset Alliance,2015
+36,R-Zone,Valve Corporation,2008
+37,RDI Halcyon,Valve Corporation,2019
+38,Sharp X68000,Valve Corporation,2015
+39,SNES,Sega Inc.,2009
+40,TI-99/4A,Open Handset Alliance,2009
+41,V.Smile,Sega Inc.,2015
+42,Acorn Archimedes,Valve Corporation,2019
+43,Amazon Fire TV,Valve Corporation,2020
+44,TurboGrafx-CD,Valve Corporation,2014
+45,PlayStation 5,Sony Interactive Entertainment,2012
+46,PDP-1,Sega Inc.,2018
+47,New Nintendo 3DS,Nintendo,2012
+48,HoloLens,Valve Corporation,2008
+49,Sega SG-1000,Sega Inc.,2011
+50,Apple TV,Apple Inc.,2019
+51,Fuze Tomahawk F1,Open Handset Alliance,2010
+52,GameStick,Sega Inc.,2018
+53,Browser,Valve Corporation,2008
+54,New Generation Portable,Open Handset Alliance,2013
+55,WonderSwan,Valve Corporation,2017
+56,WonderSwan Color,Valve Corporation,2008
+57,Zeebo,Sega Inc.,2015
+58,Zodiac,Open Handset Alliance,2011
+59,ZX Spectrum,Open Handset Alliance,2014
+60,Linux,Lin Inc.,2015
+61,Xbox One X,Microsoft,2014
+62,Xbox Scorpio,Microsoft,2011
+63,Scarlett,Sega Inc.,2015
+64,Nintendo DS,Nintendo,2016
+65,BBC Micro,Microsoft,2008
+66,Apple IIgs,Apple Inc.,2011
+67,Aquarius,Game Inc.,2011
+68,Arcade,Arcade Inc.,2012
+69,Arcadia 2001,Arcade Inc.,2010
+70,Atari 2600,Atari Inc.,2015
+71,Atari 5200,Atari Inc.,2020
+72,Atari 7800,Atari Inc.,2019
+73,Atari 8-bit,Atari Inc.,2020
+74,Game Boy Advance,GB Inc.,2020
+75,Game Boy Color,GB Inc.,2019
+76,Game.Com,GB Inc.,2017
+77,Neo Geo,Sony Interactive Entertainment,2017
+78,Neo Geo CD,Sony Interactive Entertainment,2020
+79,Neo Geo Pocket,Sony Interactive Entertainment,2018
+80,Neo Geo Pocket Color,Sony Interactive Entertainment,2008
+81,NES,Game Inc.,2008
+82,N-Gage,Nintendo,2020
+83,Nintendo 64,Nintendo,2008
+84,Nintendo 64DD,Nintendo,2017
+85,NUON,Game Inc.,2011
+86,Odyssey,Game Inc.,2019
+87,Odyssey 2,Game Inc.,2014
+88,PC-FX,Arcade Inc.,2009
+89,Pinball,Arcade Inc.,2008
+90,Pioneer LaserActive,Valve Corporation,2020
+91,NEC PC-9801,GB Inc.,2008
+92,NEC PC-8801,GB Inc.,2020
+93,GameCube,Game Inc.,2014
+94,Game Gear,Game Inc.,2012
+95,Game Wave,Game Inc.,2019
+96,Gizmondo,Open Handset Alliance,2009
+97,Genesis,Valve Corporation,2008
+98,HyperScan,Game Inc.,2008
+99,Intellivision,Valve Corporation,2011
+100,Jaguar,Open Handset Alliance,2009
+101,Leapster,Arcade Inc.,2008
+102,Lynx,Game Inc.,2009
+103,Microvision,Valve Corporation,2011

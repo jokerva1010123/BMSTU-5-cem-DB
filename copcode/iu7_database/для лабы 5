@@ -1,0 +1,203 @@
+5я лаба
+
+1) DTD (Document Type Definition) - определяет допустимые строрительные блоки
+<!DOCTYPE NEWSPAPER [
+<!ELEMENT NEWSPAPER(ARTICLE+)>
+<!ELEMENT ARTICLE(HEADLINE, BYLINE...)>
+<!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+]>
+
+
+<!DOCTYPE корневой элемент [декларация - элементов]>
+есди декларируется внутри XML - документа
+
+примеры в телеге
+
+
+XSD - схемы, создается на основании существующей XML- документа
+XSD создается вручную
+2) В VS
+VS Файл|Открыть| существующий файл_xml
+XML-код|Создать схему
+получили xsd
+
+3) Найти XSD GENERATOR(VS)
+xsd file, xml [\outputdir:sirectory]
+
+
+
+
+DTD 
+<! ELEMENT имя_элемента праивло>
+
+основные правила:
+1. ANY
+<!ELEMENT library ANY>
+2. PCDATA - символьные данные
+<!ELEMENT title (#PCDATA)
+то тогда будет
+<title> оно </title> - удовлетворяет
+
+<title> оно
+	<author>
+		кинг
+	</author>
+</title>
+не удовлетворяет
+
+3. может содержать элементы
+<!ELEMENT books (title)>
+<!ELEMENT title(#PCDATA)>
+
+<booka> 
+	<title>
+		оно
+	</title>
+</books>
+удовлетворяет
+
+4. несколько элементов
+<!ELEMENT books (title)>
+<!ELEMENT title(#PCDATA)>
+<!ELEMENT author(#PCDATA)>
+
+обязательно автор должен идти после title
+<books> 
+	<title>
+		оно
+	</title>
+	<author>
+		кинг
+	<author>
+</books>
+
+5.
+<!ELEMENT books (title|autor)> - может быть title или autor, но обязательно должен кто-то из них быть
+<!ELEMENT title(#PCDATA)>
+<!ELEMENT autor(#PCDATA)>
+
+6.
+<!ELEMENT books ((title, autor)|(autor, title))>
+<!ELEMENT title(#PCDATA)>
+<!ELEMENT autor(#PCDATA)>
+
+7.
+<!ELEMENT books (book+)>
+<!ELEMENT book(title, author)>
+<!ELEMENT autor(#PCDATA)>
+"+" - 1 и более раз
+"?" - 0 или 1 раз
+"*" - 0 или любое количество раз
+
+<books> - главный элемент, содержит в себе book1, book2, и тд
+	<book>
+		<title>
+		<author>
+	</book>
+	<book>
+	</book>
+	<book>
+	</book>
+</books>
+
+
+8.
+<!ELEMENT happy EMPTY>
+
+<happy> </happy> - вставлять внутрь нельзя
+
+9. общий объект
+<!ENTITY copyright "&#xA9">
+В XML документе:
+<copyright> & copyraght Моя корпорация </copyright>
+
+10. параметрический объект
+<!ENTITY %pcd "(#PCDATA)">
+<!ELEMENT author %pcd;>
+
+10.1 можно использовать для игнорирования либо для включени проверки участка кода заключенного в этот блок 
+блок IGNORE
+	 INCLUDE
+
+<!ENILIY %instruet "INCLUDE">
+<![%ifsrict;[
+<!ELEMENT reviews (rating, synopsis?, comments+)*>
+...
+]]>
+
+11. внешний объект - позволяет копировть какую-то xml в нашу xml
+<!ENTITY quotes SYSTEM "http://123.ru/123.xml">
+
+В xml:
+<document>
+<head> Заголовок </head>
+	&quotes;
+</document>
+
+12. неинициализируемый объект
+<!ENTITY image1 SYSTEM "http://123.ru/123.gif" NDATA GIF89a>
+
+В xml:
+<image src = "image1;">
+
+13. Атрибуты
+<!ATTLIST целевой_элемент имя_атрибута тип_атрибута значение_по_умолчанию>
+
+<body is = "1" ind = "4x56"> // у элемента body атрибут id
+
+</body>
+
+<!ATTLIST box length CDATA "0">
+<!ATTLIST frame visible (true, false) "true"> // может быть не true, а ключевое слово #IMPLIED
+
+если ключевое слово
+#REQUIRED - то обязательно должно быть указано значение атрибута
+#IMPLIED - либо задано либо не задано
+#FIXED - зафиксировано, не может быть изменено пользователем
+
+
+ТИПЫ ДАННЫХ
+
+1) CDATA - символьные данные
+2) перечисление - может быть выбрано только одно значение
+3) ENTITY - объект, определенный в DTD
+4) ENTITIES - множество объектов, определенных в DTD
+5) ID - уникальный id элемента
+6) IDREF - значение атрибута типа ID (не должно повторяться)
+7) IDREFS - множество 6)
+8) NMTOKEN - именованная лексема в XML
+9) NMTOKENS - можество 8)
+10) ТЩЕФЕШЩТ - нотация, объявленная в DTD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

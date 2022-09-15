@@ -1,0 +1,6 @@
+#!/bin/bash
+echo
+Echo DROP_TABLES:
+python3 ./CDI/drop_tables.py
+echo COMPLETED
+echo

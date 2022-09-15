@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+  {% if current_user.id %}
+    <h1>Привет, {{ current_user.username }}!</h1>
+  {% else %}
+    <h1>Привет!</h1>
+  {% endif %}
+    {% for book in books %}
+      {% include '_book.html' %}
+    {% endfor %}
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> Предыдущие
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    Следующие <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $.ajax({
+          type: "GET",
+          url: "http://localhost:5000/check_all_status_equal_two",
+          contentType: "application/json; charset=utf-8",
+          success: function(res) {
+            console.log(res);
+            for (var i = 0; i < res['Ratatoskr'].length; i++) {
+              console.log(res['Ratatoskr'][i].book_id);
+              $('#' + res['Ratatoskr'][i].book_id).html($('#' + res['Ratatoskr'][i].book_id).html() + "<td><p>Книга у пользователя " + res['Ratatoskr'][i].username + "</p></td>");  // соедиинять с имеющимися данным html, а то все пропадает
+            }
+          }
+        });
+      });
+    </script>
+{% endblock %}

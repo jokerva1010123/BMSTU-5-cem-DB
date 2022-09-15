@@ -1,0 +1,34 @@
+<table class="table table-hover">
+    <tr id="{{ book.id }}">
+      {% if not current_user.is_anonymous %}
+          <td style="width: 15%">
+            <a href="{{ url_for('book', username=current_user.username, bookid=book.id) }}">
+              {% if book.image %}
+                <img id="anotherImage" src="data:image/png;base64,{{ book.image }}" style="max-width: 100px;">
+              {% else %}
+                <img id="anotherImage" src="http://otkrytki-animacii.1000e.ru/_ph/177/2/472542465.jpg?1568208716" style="max-width: 100px;">
+              {% endif %}
+            </a>
+          </td>
+          <td style="width: 60%">
+            Книга:
+            <a href="{{ url_for('book', username=current_user.username, bookid=book.id) }}">
+              {{ book.title }}
+            </a>
+            <br> Автор: {{ book.author }}
+          </td>
+    {% else %}
+      <td style="width: 15%">
+          {% if book.image %}
+            <img id="anotherImage" src="data:image/png;base64,{{ book.image }}" style="max-width: 100px;">
+          {% else %}
+            <img id="anotherImage" src="http://otkrytki-animacii.1000e.ru/_ph/177/2/472542465.jpg?1568208716" style="max-width: 100px;">
+          {% endif %}
+      </td>
+      <td style="width: 60%">
+        Книга: {{ book.title }}
+        <br> Автор: {{ book.author }}
+      </td>
+    {% endif %}
+  </tr>
+</table>

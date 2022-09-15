@@ -1,0 +1,83 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}
+  {%if title %}{{title}} - Lib{% else %}Добро пожаловать в библиотеку{% endif %}
+{% endblock %}
+
+
+
+{% block navbar %}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}">Lib</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Книги</a></li>
+                    {% if not current_user.is_anonymous %}
+                      <li><a href="{{ url_for('add_book') }}">Добавить книгу</a></li>
+                    {% endif %}
+                </ul>
+                  <ul class="nav navbar-nav ">
+                      <form autocomplete="off" action="{{ url_for('search') }}" class="navbar-form" role="search" aria-label="Search for books to add to your shelves">
+                        <input class="form-control" autocomplete="off" name="q" type="text" placeholder="Поиск" aria-label="Search books" aria-controls="searchResults">
+                      </form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                    <li><a href="{{ url_for('login') }}">Войти</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('user', username=current_user.username) }}">{{ current_user.username }}</a></li>
+                    <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <script>
+      $(document).ready(function() {
+        if ($("#input_search").val() != '')
+          alert("11111111");
+      })
+      $("#search").click(function() {
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:5000/search",
+          data: JSON.stringify({"q": $("#input_search").val()}),
+          contentType: "application/json; charset=utf-8",
+          success: function(res) {
+            document.location.replace("{{ url_for('search', res=res) }}");
+
+          }
+        })
+      });
+    </script> -->
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}

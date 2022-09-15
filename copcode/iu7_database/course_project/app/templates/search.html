@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <h1 class="labelBook">Результаты поиска</h1>
+  <form name="searchForm" class="navbar-form" action="{{ url_for('search') }}" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+
+
+  <div class="greyText" style="padding-bottom: 10px">
+    <input type="text" name="q" size="55" value id="search_query_main" class="form-control" placeholder="Поиск по названию книги или автору">
+    <input type="hidden" name="search_type" value="books">
+    <input type="submit" value="Search" class="btn btn-default">
+  </div>
+  <div>
+    <input type="radio" checked="checked" name="search[field]" id="search_field"> все
+    <input type="radio" value="title" name="search[field]" id="search_field_title"> название
+    <input type="radio" value="author" name="search[field]" id="search_field_author"> автор 
+    <!-- <input type="radio" value="location" name="search[field]" id="search_field_location"> местоположение -->
+
+    <!-- <input type="radio" value="genre" name="search[field]" id="search_field_genre"> genre -->
+  </div>
+  <script>
+    $("#search_field_location").click(function() {
+      // должна появляться форма в которую будет вводиться расположение
+      // или не надо это делать
+      // хзззззз
+      // надо будет ппотом подумать
+
+      // но надо обязательно сделать изменение расположения на странице книги
+    })
+  </script>
+</form>
+  {% if books %}
+    {% for book in books %}
+      {% include '_book.html' %}
+    {% endfor %}
+  {% else %}
+    <p class="labelBook" style="font-size: 20px;">Похоже, что у нас такого нет ☹
+      <br>Но, на всякий случай, проверьте опечатки в запросе.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,260 @@
+1) Получить все пары вида <ФИО туриста, Страна проживания>
+
+SQL:
+select Tourists.FistName, Tourists.LastName, Cities.Country
+from Tourists join Cities on Tourists.CityID = Cities.CityID;
+
+РА:
+(Cities join Tourists)[FirstName, LastName, Country]
+
+ИК:
+RANGE OF T IS Tourists
+RANGE OF C IS Cities
+(T.FirstName, T.LastName, C.Country) WHERE C.CityID = T.CityID 
+
+----------------------------------------------------------------------------
+
+2) Получить все пары вида <Достопримечательность, Город>
+
+SQL:
+SELECT Sights.Name, Cities.Name
+FROM Sights JOIN Cities ON Sights.CityID = Cities.CityID;
+
+РА:
+(Sights JOIN Cities)[SightsName, CitiesName]
+
+ИК:
+RANGE OF S IS Sights
+RANGE OF C IS Cities
+(S.Name, C.Name) WHERE S.CityID = C.CityID 
+
+----------------------------------------------------------------------------
+
+3) Получить список всех туристов из Италии
+
+SQL:
+SELECT Tourists.FirstName, Tourists.LastName
+FROM Tourists JOIN Cities ON Tourists.CityID = Cities.CityID
+WHERE Cities.Country = "Италия"
+
+РА:
+((Tourists JOIN Cities) WHERE Cities.Country = "Италия")[FirstName, LastName]
+
+ИК:
+RANGE OF S IS Tourists
+RANGE OF C IS (Cities) WHERE Cities.Country = "Италия"
+(T.FirstName, T.LastName) WHERE EXISTS C(T.CityID = C.CityID)
+
+----------------------------------------------------------------------------
+
+4) Получить все тройки вида <ФИО туриста, Страна, Дата посещения>
+
+SQL:
+SELECT Tourists.FirstName, Cities.Country, ST.Date
+FROM Tourists T JOIN Cities C ON T.CityID = C.CityID
+	JOIN ST ON ST.TouristID = T.ID;
+
+РА:
+((Tourists JOIN ST JOIN Cities)[FirstName, Country, Date]
+
+ИК:
+RANGE OF T IS Tourists
+RANGE OF STX IS ST
+RANGE OF C IS Cities
+(T.FirstName, C.Country, STX.Date) WHERE (T.CityID = C.CityID AND (STX.TouristID = T.ID))
+
+----------------------------------------------------------------------------
+
+5) Получить список всех достопримечательностей, которые посетил Смирнов Николай
+
+SQL:
+SELECT Sights.Name
+FROM Sights JOIN ST ON Sights.ID = ST.SightsID
+	JOIN Tourists ON ST.TouristsID = Tourists.ID
+WHERE Tourists.FirstName = 'Николай' AND Tourists.LastName = 'Смирнов'
+
+РА:
+((Sights JOIN ST JOIN Tourists) WHERE Tourists[FirstName] = 'Николай' AND Tourists[LastName] = 'Смирнов')[Name]
+
+ИК:
+RANGE OF T IS (Tourists) WHERE Tourists.FirstName = 'Николай' AND Tourists.LastName = 'Смирнов'
+RANGE OF STX IS ST
+RANGE OF S IS Sights
+(Sights.Name) WHERE EXISTS STX(STX.SightID = S.ID AND EXISTS T(STX.TouristID = T.ID))
+
+----------------------------------------------------------------------------
+
+6) Получить список всех туристов, посетивших какую-либо страну в период с 05-01-2016 по 07-08-2017
+
+SQL:
+SELECT Tourists.FirstName
+FROM Tourists JOIN ST ON Tourists.ID = ST.TouristID
+WHERE ST.Date BETWEEN '05-01-2016' AND '07-08-2017'
+
+РА:
+((Tourists JOIN ST) WHERE ST[Date] < '05-01-2016' AND ST[Date] > '05-01-2016')[FirstName] 
+
+ИК:
+RANGE OF T IS Tourists 
+RANGE OF STX IS (ST) WHERE ST.Date < '05-01-2016' AND ST.Date > '05-01-2016'
+(T.Name) WHERE EXISTS STX(STX.TouristID = T.ID)
+
+----------------------------------------------------------------------------
+
+7) Получить список всех туристов из Москвы, не посетивших ни одной достопримечательности в Санкт-Петербурге
+
+SQL:
+SELECT Tourists.FirstName
+FROM Tourists JOIN Cities ON Tourists.CityID = Cities.CityID
+WHERE Cities.Name = 'Москва'
+MINUS
+SELECT Tourists.FirstName
+FROM Sights JOIN ST ON Sights.ID = ST.SightsID
+	JOIN Tourists ON ST.TouristsID = Tourists.ID
+	JOIN Cities ON Sights.CityID = Cities.CityID
+WHERE Cities.Name = 'Санкт-Петербург'
+
+РА:
+(((Tourists JOIN Cities) WHERE Cities[Name] = 'Москва')[ID] MINUS
+((Tourists JOIN ST JOIN Sights JOIN Cities) WHERE Cities[Name] = 'Санкт-Петербург')[ID])[FirstName]
+
+ИК:
+RANGE OF T IS Tourists
+RANGE OF STX IS SX
+RANGE OF S IS Sights
+RANGE OF C IS Cities
+RANGE OF TM IS
+	(T) WHERE C.Name = 'Москва'
+	(T) WHERE EXISTS С(С.ID = T.CityID)
+RANGE OF TP IS
+	(T) WHERE C.Name = 'Санкт-Петербург'
+	(T) WHERE EXISTS STX(STX.TouristID = T.ID WHERE EXISTS S(S.ID = STX.SightID WHERE EXISTS C(C.ID = S.CityID))) 
+(TM.FirstName) WHERE NOT EXISTS TP(TP.ID = TM.ID)
+
+----------------------------------------------------------------------------
+
+8) Получить список всех туристов, никогда не бывших в Турции
+
+SQL:
+SELECT Tourists.FirstName, Tourists.LastName
+FROM Tourists 
+MINUS 
+SELECT FirstName, LastName
+FROM Tourists T JOIN ST ON ST.TouristID=T.ID
+	JOIN Sights S ON ST.SightID=S.ID
+	JOIN Cities C ON C.CityID=S.CityID
+WHERE Cities.Country = 'Турция'
+
+РА:
+(Tourists)[FirstName,SecondName] MINUS ((Tourists JOIN ST JOIN Sights JOIN Cities) WHERE Cities[Country] = ‘Турция’)[FirstName, LastName]
+
+ИК:
+RANGE OF TX IS Tourists
+RANGE OF STX IS ST
+RANGE OF SX IS Sights
+RANGE OF CX IS (Cities) WHERE Cities.Country = 'Турция’
+(TX.FirstName, TX.LastName) WHERE EXISTS STX (STX.TouristID = TX.ID AND EXISTS SX(STX.SightID = SX.ID AND NOT EXISTS CX(CX.CityID = SX.CityID))
+
+----------------------------------------------------------------------------
+
+9) Получить список туристов, побывавших в Амстердаме
+
+SQL:
+SELECT Tourists.FirstName
+FROM Sights JOIN ST ON Sights.ID = ST.SightsID
+	JOIN Tourists ON ST.TouristsID = Tourists.ID
+	JOIN Cities ON Sights.CityID = Cities.CityID
+WHERE Cities.Name = 'Амстердам'
+
+РА:
+((Tourists JOIN ST JOIN Sights JOIN Cities) WHERE Cities[Name] = 'Амстердам')[FirstName]
+
+ИК:
+RANGE OF T IS Tourists
+RANGE OF STX IS SX
+RANGE OF S IS Sights
+RANGE OF C IS (Cities) WHERE Cities.Name = 'Амстердам'
+(T.FirstName) WHERE EXISTS STX(STX.TouristID = T.ID WHERE EXISTS S(S.ID=STX.SightID WHERE EXISTS C(C.ID=S.CityID))) 
+
+----------------------------------------------------------------------------
+
+10) Получить список всех туристов из Москвы, посещавших достопримечательности только в своей стране
+
+SQL:
+SELECT Tourists.FirstName, Tourists.LastName
+FROM Tourists JOIN City C ON T.CityID = C.Id 
+WHERE C.name = 'Moscow'
+MINUS 
+SELECT FirstName, LastName
+FROM Tourists T JOIN ST on ST.TouristID=T.ID
+	JOIN Sights S ON ST.SightID=S.ID
+	JOIN Cities C ON C.CityID=S.CityID
+	WHERE Cities.Country <> 'Russia'
+
+РА:
+((Tourists JOIN Cities) WHERE Cities.name = 'Moscow')[FirstName, LastName]
+MINUS
+((Tourists JOIN ST JOIN Sights JOIN Cities) WHERE Cities[Country] != 'Russia')[FirstName, LastName]
+
+ИК:
+RANGE OF C IS Cities
+RANGE OF TX IS (T) WHERE EXISTS C(T.CityID = C.CityID AND C.name = 'Moscow'))
+RANGE OF STX IS ST
+RANGE OF SX IS Sights
+RANGE OF CX IS (Cities) WHERE Cities.Country != 'Russia'
+(TX.FirstName, TX.LastName) WHERE EXISTS STX(STX.TouristID = TX.ID AND EXISTS SX(STX.SightID = SX.ID AND NOT EXISTS CX(CX.CityID = SX.CityID)))
+
+----------------------------------------------------------------------------
+
+11) Получить имена всех туристов, не посетивших ни одну достопримечательность
+
+SQL:
+SELECT FirstName, LastName
+FROM Tourists
+MINUS 
+SELECT FirstName, LastName
+FROM Tourists T join ST on ST.TouristID=T.ID
+
+РА:
+(Tourists)[FirstName, LastName]
+MINUS
+((Tourists JOIN ST) WHERE EXISTS ST(Tourists.ID = ST.TouristID))[FirstName, LastName]
+
+ИК:
+RANGE OF T IS Tourists
+RANGE OF STX IS ST
+(T.FistName, T.LastName) WHERE NOT EXISTS STX(STX.TouristID = T.ID)
+
+----------------------------------------------------------------------------
+
+12) Получить все пары вида <Название достопримечательности, количество посетивших ее туристов>
+
+SQL:
+SELECT Sights.Name, COUNT(*)
+FROM Tourists T JOIN ST ON ST.TouristID = T.ID
+	JOIN Sights S on ST.SightID = S.ID
+GROUP BY Sights.Name
+
+
+РА:
+SUMMARIZE (Tourists JOIN ST JOIN Sights) PER Sights{Name} ADD COUNT AS cntM
+
+ИК:
+RANGE OF TX IS Tourists
+RANGE OF STX IS ST
+RANGE OF SX IS Sights
+(SX.Name, COUNT (TX WHERE EXISTS STX (STX.TouristID=TX.ID AND EXISTS SX
+(SX.ID = STX.SightID))) AS cntM)
+
+----------------------------------------------------------------------------
+
+13) Получить ФИО самого молодого туриста
+
+SQL:
+SELECT Tourists.FirstName
+FROM Tourists
+ORDER BY Tourists.Age ASC
+LIMIT 1
+
+РА:
+

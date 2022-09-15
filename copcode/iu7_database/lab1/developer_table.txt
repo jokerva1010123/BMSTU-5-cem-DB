@@ -1,0 +1,181 @@
+id Разработчика,Название организации,Местоположение
+1,GSC Game World,Austria
+2,Bethesda Game Studios,Spain
+3,Bethesda Game Studios,Israel
+4,Rockstar North,Austria
+5,CD Projekt RED,Denmark
+6,Remedy Entertainment,Russia
+7,Software,South Korea
+8,Industries,France
+9,Sucker Punch,Japan
+10,Experiment 101,Canada
+11,Moon Studios,Austria
+12,The Coalition,Russia
+13,Kojima Productions,Belgiua
+14,Techland,United Kingdom
+15,Naughty Dog,Denmark
+16,Ubisoft Montpellie,United Kingdom
+17,Ubisoft Singapore,Finland
+18,Software,Italy
+19,From Software,Ireland
+20,Ubisoft Massive,South Korea
+21,Capcom,Denmark
+22,Reagent Games,Austria
+23,4A Games,Sweden
+24,BioWare,France
+25,Bend Game Studio,United States
+26,Team Ninja,United States
+27,Capcom,Netherlands
+28,Pixelopus,Spain
+29,New World Interactive,Japan
+30,Sora,Finland
+31,Avalanche Studios,Israel
+32,Valve Corporation,Japan
+33,Gunfire Games,Canada
+34,DICE,United Kingdom
+35,Bethesda Game Studios,Switzerland
+36,IO Interactive,Austria
+37,Overkill Software,Japan
+38,Rockstar Games,Austria
+39,Project Soul,Norway
+40,Treyarch,South Korea
+41,Ubisoft Quebec,Netherlands
+42,Playground Games,South Korea
+43,Dontnod Entertainment,France
+44,Crystal Dynamics,Israel
+45,Insomniac Games,Austria
+46,Creepy Jar,Belgiua
+47,Croteam,Sweden
+48,Vostok Games,Belgiua
+49,Rebellion,Finland
+50,Ivory Tower,Switzerland
+51,Dontnod Entertainment,Denmark
+52,Frontier Developments,United Kingdom
+53,Coldwood Interactive,Ireland
+54,Dontnod Entertainment,Canada
+55,Madmind Studio,Ireland
+56,Quantic Dream,Switzerland
+57,Undead Labs,South Korea
+58,Santa Monica Studio,Spain
+59,Ryu ga Gotoku Studio,Japan
+60,Iron Galaxy Studios,Spain
+61,Ubisoft Montreal,Austria
+62,Hazelight Studios,Russia
+63,Rare,Ireland
+64,Fatshark,United States
+65,Daybreak Game Company,Netherlands
+66,Konami,Italy
+67,Crytek USA,Italy
+68,Warhorse Studios,Switzerland
+69,Capcom,South Korea
+70,Bluehole Studio,Canada
+71,EA Motive,Finland
+72,Ghost Games,Canada
+73,Sledgehammer Games,Russia
+74,MachineGames,United Kingdom
+75,Ubisoft Montreal,Belgiua
+76,Polyphony Digital,Ireland
+77,Piranha Bytes,Spain
+78,Ubisoft San Francisco,Belgiua
+79,Tango Gameworks,France
+80,Monolith Productions,Canada
+81,EA Canada,Austria
+82,Turn 10 Studios,Ireland
+83,Studio MDHR,Japan
+84,The Creative Assembly,France
+85,Slightly Mad Studios,Denmark
+86,Capcom,South Korea
+87,Arkane Studios,Switzerland
+88,Bungie Studios,Germany
+89,Deck Nine Games,France
+90,Naughty Dog,Italy
+91,Deep Silver Volition,Spain
+92,Boss Key Studios,United Kingdom
+93,Ninja Theory,United Kingdom
+94,Epic Games,Ireland
+95,The Farm 51,Norway
+96,Codemasters,Italy
+97,Namco Bandai Games,Norway
+98,Illfonic,Canada
+99,NetherRealm Studios,Austria
+100,Deck 13,United Kingdom
+101,Arkane Studios,Austria
+102,City Interactive,Israel
+103,Red Barrels,South Korea
+104,Microids,United States
+105,BioWare,Germany
+106,Kylotonn Entertainment,United States
+107,Cyanide Studios,Ireland
+108,Platinum Games,Switzerland
+109,Ubisoft Paris,United States
+110,Nintendo EPD,Spain
+111,Guerrilla Games,Japan
+112,Rebellion,Japan
+113,Ubisoft Montreal,Netherlands
+114,Team Ninja,Israel
+115,Capcom,United Kingdom
+116,Capcom Vancouver,Switzerland
+117,Team Ico,Belgiua
+118,Ubisoft Annecy,Russia
+119,Square Enix,Norway
+120,Ubisoft Montreal,Italy
+121,Arkane Studios,Ireland
+122,Infinity Ward,United States
+123,Respawn Entertainment,France
+124,DICE,Finland
+125,Flying Wild Hog,Spain
+126,Coalition,Netherlands
+127,Hangar 13,Netherlands
+128,Turn 10 Studios,Denmark
+129,Level-5 Comcept,Japan
+130,Eidos Montreal,Russia
+131,Hello Games,Ireland
+132,Telltale Games,Russia
+133,Playdead,Canada
+134,Traveller's Tales Ltd.,Israel
+135,Spiders Studios,Netherlands
+136,Capcom,Belgiua
+137,Frogwares,South Korea
+138, DICE,Russia
+139,Blizzard Entertainment,Spain
+140,Deep Silver Dambuster Studios,Spain
+141,Software,Sweden
+142,Naughty Dog,Russia
+143,From Software,Russia
+144,Remedy Entertainment,United Kingdom
+145,IO Interactive,Russia
+146,Ubisoft Massive,South Korea
+147,Ubisoft Montreal,Switzerland
+148, PopCap Games,Netherlands
+149,Coldwood Interactive,Israel
+150,Climax Studios,Norway
+151,Campo Santo,Ireland
+152,Firaxis Games,South Korea
+153,Traveller's Tales,Israel
+154,Number None Inc,Sweden
+155,Avalanche Studios,Germany
+156,Ubisoft Montreal,Canada
+157,DICE,Belgiua
+158,Crystal Dynamics,United Kingdom
+159,Bethesda Game Studios,United Kingdom
+160,Treyarch,South Korea
+161,Ghost Games,Ireland
+162,343 Industries,Russia
+163,Ubisoft Quebec,Denmark
+164,Frictional Games,Austria
+165,Turn 10 Studios,Canada
+166,Kojima Productions,Denmark
+167,Avalanche Studios,Russia
+168,Supermassive Games,Norway
+169,Rocksteady Studios,Spain
+170,Bethesda Game Studios,United Kingdom
+171,Blizzard Entertainment,Belgiua
+172,CD Projekt,Sweden
+173,Slightly Mad Studios,Italy
+174,NetherRealm Studios,Italy
+175,From Software,France
+176,Visceral Games,Germany
+177,Moon Studios,Switzerland
+178,Dennaton Games,France
+179,Capcom,Spain
+180,Ready at Dawn Studios,Russia

@@ -1,0 +1,103 @@
+Nintendo Switch,Nintendo
+PlayStation VR,Sony Interactive Entertainment
+PlayStation 4 Pro,Sony Interactive Entertainment
+Steam Machines,Valve Corporation
+SteamOS,Valve Corporation
+Xbox One,Microsoft
+PlayStation 4,Sony Interactive Entertainment
+PlayStation Vita TV,Sony Interactive Entertainment
+Ouya,OUYA Inc.
+Wii U,Nintendo
+PlayStation Network,Sony Interactive Entertainment
+PlayStation Vita,Sony Interactive Entertainment
+iPad,Apple Inc.
+PlayStation Network (PSP),Sony Interactive Entertainment
+Android,Open Handset Alliance
+iOS,Apple Inc.
+iPhone,Apple Inc.
+Wii,Nintendo
+Wii Shop,Nintendo
+PlayStation Network (PS3),Sony Interactive Entertainment
+PlayStation 3,Sony Interactive Entertainment
+Xbox Games Store,Microsoft
+Xbox 360,Microsoft
+PlayStation Portable,Sony Interactive Entertainment
+Xbox,Microsoft
+PlayStation 2,Sony Interactive Entertainment
+PlayStation,Sony Interactive Entertainment
+Sega Master System,Sega Inc.
+SuperGrafx,Open Handset Alliance
+Sega Pico,Sega Inc.
+Sega CD,Sega Inc.
+Sega 32X,Sega Inc.
+Sharp X1,Open Handset Alliance
+Satellaview,Valve Corporation
+Saturn,Open Handset Alliance
+R-Zone,Valve Corporation
+RDI Halcyon,Valve Corporation
+Sharp X68000,Valve Corporation
+SNES,Sega Inc.
+TI-99/4A,Open Handset Alliance
+V.Smile,Sega Inc.
+Acorn Archimedes,Valve Corporation
+Amazon Fire TV,Valve Corporation
+TurboGrafx-CD,Valve Corporation
+PlayStation 5,Sony Interactive Entertainment
+PDP-1,Sega Inc.
+New Nintendo 3DS,Nintendo
+HoloLens,Valve Corporation
+Sega SG-1000,Sega Inc.
+Apple TV,Apple Inc.
+Fuze Tomahawk F1,Open Handset Alliance
+GameStick,Sega Inc.
+Browser,Valve Corporation
+New Generation Portable,Open Handset Alliance
+WonderSwan,Valve Corporation
+WonderSwan Color,Valve Corporation
+Zeebo,Sega Inc.
+Zodiac,Open Handset Alliance
+ZX Spectrum,Open Handset Alliance
+Linux,Lin Inc.,Valve Corporation
+Xbox One X,Microsoft
+Xbox Scorpio,Microsoft
+Scarlett,Sega Inc.
+Nintendo DS,Nintendo
+BBC Micro,Microsoft
+Apple IIgs,Apple Inc.
+Aquarius,Game Inc.
+Arcade,Arcade Inc.
+Arcadia 2001,Arcade Inc.
+Atari 2600,Atari Inc.
+Atari 5200,Atari Inc.
+Atari 7800,Atari Inc.
+Atari 8-bit,Atari Inc.
+Game Boy Advance,GB Inc.
+Game Boy Color,GB Inc.
+Game.Com,GB Inc.
+Neo Geo,Sony Interactive Entertainment
+Neo Geo CD,Sony Interactive Entertainment
+Neo Geo Pocket,Sony Interactive Entertainment
+Neo Geo Pocket Color,Sony Interactive Entertainment
+NES,Game Inc.
+N-Gage,Nintendo
+Nintendo 64,Nintendo
+Nintendo 64DD,Nintendo
+NUON,Game Inc.
+Odyssey,Game Inc.
+Odyssey 2,Game Inc.
+PC-FX,Arcade Inc.
+Pinball,Arcade Inc.
+Pioneer LaserActive,Valve Corporation
+NEC PC-9801,GB Inc.
+NEC PC-8801,GB Inc.
+GameCube,Game Inc.
+Game Gear,Game Inc.
+Game Wave,Game Inc.
+Gizmondo,Open Handset Alliance
+Genesis,Valve Corporation
+HyperScan,Game Inc.
+Intellivision,Valve Corporation
+Jaguar,Open Handset Alliance
+Leapster,Arcade Inc.
+Lynx,Game Inc.
+Microvision,Valve Corporation
