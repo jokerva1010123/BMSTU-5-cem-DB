@@ -59,7 +59,6 @@ def generate_animals():
     min_kinds = MIN_KINDS - 1; max_kinds = MAX_KINDS - 1
     dd = [i + 1 for i in range(MAX_SIZE_DATABASE)]
     shuffle(dd)
-    print(dd)
     for i in range(MAX_SIZE_DATABASE):
         id = i+1
         kind = kinds[randint(min_kinds, max_kinds)]
