@@ -9,7 +9,7 @@ CREATE table veterinarian(
 	surname VARCHAR(50),
 	age INT CHECK(age >= 25 AND age <= 60),
 	qualification VARCHAR(20),
-	cabinet INT CHECK(cabinet >= 1 AND cabinet <= 500)
+	cabinet INT CHECK(cabinet >= 0 AND cabinet <= 500)
 );
 
 create table treatment
