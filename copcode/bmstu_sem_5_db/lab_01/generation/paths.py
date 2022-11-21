@@ -1,0 +1,11 @@
+PATH_VETS = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/veterinarians.txt"
+PATH_QUALIFICATIONS = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/qualification_vets.txt"
+PATH_TREATMENTS = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/treatments.txt"
+PATH_ANIMALS = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/animals.txt"
+PATH_ANIMAL_NAMES = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/animal_names.txt"
+PATH_DIAGNOSISES = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/data/diagnosises.txt"
+
+PATH_VETS_DATABASE = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/database_csv/veterinarians.csv"
+PATH_TREATMENTS_DATABASE = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/database_csv/treatments.csv"
+PATH_ANIMALS_DATABASE = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/database_csv/animals.csv"
+PATH_DIAGNOSISES_DATABASE = "D:/BMSTU/BMSTU-5-cem-DB/copcode/bmstu_sem_5_db/lab_01/database_csv/diagnosises.csv"
