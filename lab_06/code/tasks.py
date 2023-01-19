@@ -1,3 +1,4 @@
+x = 5
 def do_task_1(connection):
     '''
     Выполнить скалярный запрос
@@ -116,43 +117,11 @@ def do_task_7(connection):
 def do_task_8(connection):
     '''
     Вызвать системную функцию или процедуру.
-    Вывести приоритет врачей.
+    Функция выводит имя текущей базы данных
     '''
     cursor = connection.cursor()
-    cursor.execute("""
-                    create temp table if not exists vets_submission
-                    (
-                        id_vet int primary key,
-                        boss_id_vet int references vets_submission(id_vet),
-                        surname varchar(20)
-                    );
-
-                    insert into vets_submission(id_vet, boss_id_vet, surname)
-                    values
-                    (0, null, 'Абрамова'),
-                    (1, 0, 'Абакумов'),
-                    (2, 3, 'Аверкова'),
-                    (3, 0, 'Аврамов'),
-                    (4, 2, 'Абрикосов'),
-                    (5, 4, 'Абросимова'),
-                    (6, 1, 'Авдеева');
-
-                    create temp table if not exists vets_submission_result
-                    (
-                        surname varchar(20),
-                        level int
-                    );
-
-                    call define_submission();
-
-                    select *
-                    from vets_submission_result;
-                   """)
-    result = cursor.fetchall()
-
-    print(f'Список врачей:')
-    for i in range(len(result)):
-        print(result[i])
+    cursor.execute("SELECT current_database()")
+    print(cursor.fetchall()[0][0])
 
 def do_task_9(connection):
     '''
@@ -163,7 +132,6 @@ def do_task_9(connection):
                     drop table if exists hosts;
                     create table hosts
                     (
-                        id_host int primary key,
                         host_name varchar,
                         host_age int,
 
@@ -181,19 +149,19 @@ def do_task_10(connection):
     Выполнить вставку данных в созданную таблицу с использованием insert или copy.
     '''
     cursor = connection.cursor()
-    cursor.execute("""
-                    insert into hosts values
-                    (1, 'Дима', 15, 5),
-                    (2, 'Миша', 12, 3),
-                    (3, 'Ваня', 9, 8),
-                    (4, 'Лена', 17, 1),
-                    (5, 'Катя', 20, 10);
-
-                    select *
-                    from hosts
-                   """)
+    name = input('Input name:')
+    age = input('Input age: ')
+    id_animal = input('Input id animal: ')
+    try:
+        cursor.execute("insert into hosts values (%s, %s, %s);", (name, age, id_animal))
+        cursor.execute("""select * from hosts;""")
+    except:
+        print("Ошибка: некорректный запрос")
+        connection.rollback()
+        return
 
     connection.commit()
+    
 
     result = list()
     row = cursor.fetchone()
@@ -205,8 +173,9 @@ def do_task_10(connection):
     for row in result:
         if row != None:
             print(row)
+    cursor.close()
 
-def do_task_11(connection):
+'''
     cursor = connection.cursor()
     cursor.execute("""
                     insert into hosts values
@@ -271,4 +240,4 @@ def do_task_11(connection):
     print("Результат удаления имени хозяина:")
     for row in result:
         if row != None:
-            print(row)
+            print(row)'''

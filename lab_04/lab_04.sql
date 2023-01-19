@@ -107,7 +107,7 @@ $$
 	
 	plpy.execute(f"update vets_user \
 				   set cabinet = 0 \
-				   where surname = 'old_surname';")
+				   where surname = '{old_surname}';")
 				   
 	return TD["new"]
 $$

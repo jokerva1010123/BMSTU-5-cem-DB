@@ -20,10 +20,10 @@ insert into employee(
 	birthdate, 
 	department
 ) values 
-	(1, 'FIO1', '25-09-1995', 'IT'),
-	(2, 'FIO2', '30-09-1999', 'IT'),
-	(3, 'FIO3', '25-09-1990', 'Fin'),
-	(4, 'FIO4', '15-09-1997', 'Fin');
+	(1, 'FIO1', '1995-09-25', 'IT'),
+	(2, 'FIO2', '1999-09-30', 'IT'),
+	(3, 'FIO3', '1990-09-25', 'Fin'),
+	(4, 'FIO4', '1997-09-15', 'Fin');
 
 
 insert into employee(
@@ -32,20 +32,20 @@ insert into employee(
 	birthdate, 
 	department
 ) values 
-	(5, 'FIO5', '25-09-1995', 'IT'),
-	(6, 'FIO6', '30-09-1999', 'IT'),
-	(7, 'FIO7', '25-09-1990', 'Fin'),
-	(8, 'FIO8', '15-09-1997', 'Fin'),
-	(9, 'FIO9', '25-09-1990', 'Fin'),
-	(10, 'FIO10', '25-09-1991', 'Fin'),
-	(11, 'FIO11', '22-09-1992', 'Fin'),
-	(12, 'FIO12', '26-09-1993', 'Fin'),
-	(13, 'FIO13', '25-09-1994', 'Fin'),
-	(14, 'FIO14', '15-09-1995', 'Fin'),
-	(15, 'FIO15', '24-09-1996', 'Fin'),
-	(16, 'FIO16', '22-09-1996', 'Fin'),
-	(17, 'FIO17', '25-05-1994', 'Fin'),
-	(18, 'FIO18', '25-04-1997', 'Fin');
+	(5, 'FIO5', '1995-09-25', 'IT'),
+	(6, 'FIO6', '1999-09-30', 'IT'),
+	(7, 'FIO7', '1990-09-25', 'Fin'),
+	(8, 'FIO8', '1997-09-15', 'Fin'),
+	(9, 'FIO9', '1990-09-25', 'Fin'),
+	(10, 'FIO10', '1991-09-25', 'Fin'),
+	(11, 'FIO11', '1992-09-22', 'Fin'),
+	(12, 'FIO12', '1993-09-26', 'Fin'),
+	(13, 'FIO13', '1994-09-25', 'Fin'),
+	(14, 'FIO14', '1995-09-15', 'Fin'),
+	(15, 'FIO15', '1996-09-24', 'Fin'),
+	(16, 'FIO16', '1996-09-22', 'Fin'),
+	(17, 'FIO17', '1994-05-25', 'Fin'),
+	(18, 'FIO18', '1997-04-25', 'Fin');
 
 
 insert into record(
@@ -55,59 +55,59 @@ insert into record(
 	rtime, 
 	rtype
 ) values
-	(1, '20-12-2019', 'Понедельник', '09:01', 1),
-	(1, '20-12-2019', 'Понедельник', '09:12', 2),
-	(1, '20-12-2019', 'Понедельник', '09:40', 1),
-	(1, '20-12-2019', 'Понедельник', '12:01', 2),
-	(1, '20-12-2019', 'Понедельник', '13:40', 1),
-	(1, '20-12-2019', 'Понедельник', '20:40', 2),
+	(1, '2022-12-20', 'Понедельник', '09:01', 1),
+	(1, '2022-12-20', 'Понедельник', '09:12', 2),
+	(1, '2022-12-20', 'Понедельник', '09:40', 1),
+	(1, '2022-12-20', 'Понедельник', '12:01', 2),
+	(1, '2022-12-20', 'Понедельник', '13:40', 1),
+	(1, '2022-12-20', 'Понедельник', '20:40', 2),
 	
-	(1, '21-12-2019', 'Понедельник', '09:01', 1),
-	(1, '21-12-2019', 'Понедельник', '09:12', 2),
-	(1, '21-12-2019', 'Понедельник', '09:40', 1),
-	(1, '21-12-2019', 'Понедельник', '12:01', 2),
-	(1, '21-12-2019', 'Понедельник', '13:40', 1),
-	(1, '21-12-2019', 'Понедельник', '20:40', 2),
+	(1, '2022-12-21', 'Понедельник', '09:01', 1),
+	(1, '2022-12-21', 'Понедельник', '09:12', 2),
+	(1, '2022-12-21', 'Понедельник', '09:40', 1),
+	(1, '2022-12-21', 'Понедельник', '12:01', 2),
+	(1, '2022-12-21', 'Понедельник', '13:40', 1),
+	(1, '2022-12-21', 'Понедельник', '20:40', 2),
 	
-	(1, '22-12-2019', 'Понедельник', '09:01', 1),
-	(1, '22-12-2019', 'Понедельник', '09:12', 2),
-	(1, '22-12-2019', 'Понедельник', '09:40', 1),
-	(1, '22-12-2019', 'Понедельник', '12:01', 2),
-	(1, '22-12-2019', 'Понедельник', '13:40', 1),
-	(1, '22-12-2019', 'Понедельник', '20:40', 2),
+	(1, '2022-12-22', 'Понедельник', '09:01', 1),
+	(1, '2022-12-22', 'Понедельник', '09:12', 2),
+	(1, '2022-12-22', 'Понедельник', '09:40', 1),
+	(1, '2022-12-22', 'Понедельник', '12:01', 2),
+	(1, '2022-12-22', 'Понедельник', '13:40', 1),
+	(1, '2022-12-22', 'Понедельник', '20:40', 2),
 	
 	
-	(3, '21-12-2019', 'Понедельник', '09:01', 1),
-	(3, '21-12-2019', 'Понедельник', '09:12', 2),
-	(3, '21-12-2019', 'Понедельник', '09:40', 1),
-	(3, '21-12-2019', 'Понедельник', '12:01', 2),
-	(3, '21-12-2019', 'Понедельник', '13:40', 1),
-	(3, '21-12-2019', 'Понедельник', '20:40', 2),
+	(3, '2022-12-21', 'Понедельник', '09:01', 1),
+	(3, '2022-12-21', 'Понедельник', '09:12', 2),
+	(3, '2022-12-21', 'Понедельник', '09:40', 1),
+	(3, '2022-12-21', 'Понедельник', '12:01', 2),
+	(3, '2022-12-21', 'Понедельник', '13:40', 1),
+	(3, '2022-12-21', 'Понедельник', '20:40', 2),
 
-	(2, '21-12-2019', 'Понедельник', '08:51', 1),
-	(2, '21-12-2019', 'Понедельник', '20:31', 2),
+	(2, '2022-12-21', 'Понедельник', '08:51', 1),
+	(2, '2022-12-21', 'Понедельник', '20:31', 2),
 
-	(4, '21-12-2019', 'Понедельник', '09:51', 1),
-	(4, '21-12-2019', 'Понедельник', '20:31', 2),
+	(4, '2022-12-21', 'Понедельник', '09:51', 1),
+	(4, '2022-12-21', 'Понедельник', '20:31', 2),
 	
-	(6, '21-12-2019', 'Понедельник', '09:51', 1),
-	(6, '21-12-2019', 'Понедельник', '20:31', 2),
+	(6, '2022-12-21', 'Понедельник', '09:51', 1),
+	(6, '2022-12-21', 'Понедельник', '20:31', 2),
 
-	(1, '23-12-2019', 'Среда', '09:11', 1),
-	(1, '23-12-2019', 'Среда', '09:12', 2),
-	(1, '23-12-2019', 'Среда', '09:40', 1),
-	(1, '23-12-2019', 'Среда', '20:01', 2),
+	(1, '2022-12-23', 'Среда', '09:11', 1),
+	(1, '2022-12-23', 'Среда', '09:12', 2),
+	(1, '2022-12-23', 'Среда', '09:40', 1),
+	(1, '2022-12-23', 'Среда', '20:01', 2),
 
-	(3, '23-12-2019', 'Среда', '09:01', 1),
-	(3, '23-12-2019', 'Среда', '09:12', 2),
-	(3, '23-12-2019', 'Среда', '09:50', 1),
-	(3, '23-12-2019', 'Среда', '20:01', 2),
+	(3, '2022-12-23', 'Среда', '09:01', 1),
+	(3, '2022-12-23', 'Среда', '09:12', 2),
+	(3, '2022-12-23', 'Среда', '09:50', 1),
+	(3, '2022-12-23', 'Среда', '20:01', 2),
 
-	(2, '23-12-2019', 'Среда', '08:41', 1),
-	(2, '23-12-2019', 'Среда', '20:31', 2),
+	(2, '2022-12-23', 'Среда', '08:41', 1),
+	(2, '2022-12-23', 'Среда', '20:31', 2),
 
-	(4, '23-12-2019', 'Среда', '09:51', 1),
-	(4, '23-12-2019', 'Среда', '20:31', 2);
+	(4, '2022-12-23', 'Среда', '09:51', 1),
+	(4, '2022-12-23', 'Среда', '20:31', 2);
 
 
 -- Задание 2
@@ -148,7 +148,7 @@ from
 (
 select employee_id, rdate 
 from record 
-where rtype = 1 and rdate = '21-12-2019'
+where rtype = 1 and rdate = '2022-12-21'
 group by employee_id, rdate 
 having count(*) = 1 
 ) as temp1 join
@@ -173,7 +173,7 @@ where id in
 	(
 		select employee_id, min(rtime)
 		from record
-		where rtype = 1 and rdate = '23-12-2019'
+		where rtype = 1 and rdate = '2022-12-23'
 		group by employee_id
 		having min(rtime) > '9:00'
 	) as tmp
@@ -190,7 +190,7 @@ select *, row_number() over(partition by employee_id, rdate order by rtime) as n
 from record 
 where rtype = 1 
 )as temp_res1 
-where temp_res1.rtime > '09:00:00' and temp_res1.num = 1 and temp_res1.rdate = '21-12-2019'
+where temp_res1.rtime > '09:00:00' and temp_res1.num = 1 and temp_res1.rdate = '2022-12-21'
 )as temp_res2 join employee on temp_res2.employee_id = employee.id 
 group by department 
 
@@ -225,7 +225,7 @@ group by department
     ----------
 select employee_id, rtime, --, min(rtime)
 		from record 
-		where rtype = 1 and rdate = '23-12-2019'
+		where rtype = 1 and rdate = '2022-12-23'
 		group by employee_id
 		having min(rtime) > '9:00'
 
@@ -339,9 +339,9 @@ with first_time_in as (
 	where rtype = 1)
 select employee.id, employee.fio, time_in
 from first_time_in join employee on first_time_in.employee_id = employee.id
-where rdate = '21-12-2019' and time_in = (select max(time_in)
+where rdate = '2022-12-21' and time_in = (select max(time_in)
 				 from first_time_in
-				 where rdate = '21-12-2019')
+				 where rdate = '2022-12-21')
 
 
 -- без wuth
@@ -350,12 +350,12 @@ from
 (select distinct on (rdate, time_in) employee_id, rdate, min(rtime) OVER (PARTITION BY employee_id, rdate) as time_in
 	from record
 	where rtype = 1) as r join employee on r.employee_id = employee.id
-where rdate = '21-12-2019' and time_in = 
+where rdate = '2022-12-21' and time_in = 
 				(select max(time_in)
 				 from (select distinct on (rdate, time_in) employee_id, rdate, min(rtime) OVER (PARTITION BY employee_id, rdate) as time_in
 						from record
 						where rtype = 1) as ee
-				 where rdate = '21-12-2019')
+				 where rdate = '2022-12-21')
 
 						
 -- !!!10. Найти все отделы, в которых нет сотрудников моложе 25 лет
@@ -375,9 +375,9 @@ with first_time_in as (
 	where rtype = 1)
 select employee.id, employee.fio, time_in
 from first_time_in join employee on first_time_in.employee_id = employee.id
-where rdate = '23-12-2019' and time_in = (select min(time_in)
+where rdate = '2022-12-23' and time_in = (select min(time_in)
 				 from first_time_in
-				 where rdate = '23-12-2019')
+				 where rdate = '2022-12-23')
 				 
 				 
 				 
@@ -410,14 +410,14 @@ with first_time_in as (
 	where rtype = 1)
 select employee.id, employee.fio, time_in
 from first_time_in join employee on first_time_in.employee_id = employee.id
-where rdate = '23-12-2019' and time_in <= '9:05' and time_in > '9:00'
+where rdate = '2022-12-23' and time_in <= '9:05' and time_in > '9:00'
 					
 -- без with		 
 select employee.id, employee.fio, time_in
 from (select distinct on (rdate, time_in) employee_id, rdate, min(rtime) OVER (PARTITION BY employee_id, rdate) as time_in
 	from record
 	where rtype = 1) as first_time_in join employee on first_time_in.employee_id = employee.id
-where rdate = '23-12-2019' and time_in <= '9:05' and time_in > '9:00'
+where rdate = '2022-12-23' and time_in <= '9:05' and time_in > '9:00'
 					
 					 
 				 
@@ -433,7 +433,7 @@ from employee join
 		order by employee_id, rdate, rtime
 		) as small_durations
 on employee.id = small_durations.employee_id
-where small_durations.rdate = '21-12-2019'
+where small_durations.rdate = '2022-12-21'
 and small_durations.tmp_dur > '00:10:00'
 group by small_durations.employee_id
 HAVING count(small_durations.employee_id) > 1
@@ -499,7 +499,7 @@ AS $$
 	return run
 $$LANGUAGE plpython3u;
 
-SELECT * FROM missed_work('21-12-2019');
+SELECT * FROM missed_work('2022-12-21');
 
     SELECT id, fio, department 
     FROM employee
@@ -507,7 +507,7 @@ SELECT * FROM missed_work('21-12-2019');
     (
         SELECT employee.id
         FROM employee JOIN record ea on employee.id = ea.employee_id
-        WHERE rdate = '21-12-2019'--dt
+        WHERE rdate = '2022-12-21'--dt
         AND rtype = 1
     );
 
@@ -598,7 +598,7 @@ $$
 	return run.nrows()    
 $$ LANGUAGE plpython3u;
 
-SELECT * FROM count_employee('21-12-2019') AS cnt;
+SELECT * FROM count_employee('2022-12-21') AS cnt;
 
 -- но тут мы продолжаем биться (ошибка связана с пробелами/табами)
 create or replace function latters_cnt(target_date date) 
@@ -724,7 +724,7 @@ select mt, count(mt)
 from (
 	select  (min(rtime) - '9:00') as mt
 	from record r 
-	where rdate = '21-12-2019' and rtype = 1
+	where rdate = '2022-12-21' and rtype = 1
 	group by employee_id
 	having min(r.rtime) > '9:00') as t1
 group by mt
@@ -749,7 +749,7 @@ AS $$
    		 				from (\
 				        select  (min(rtime) - '9:00') as mt\
 				        from record r\
-				        where rdate = '21-12-2019' and rtype = 1\
+				        where rdate = '2022-12-21' and rtype = 1\
 				        group by employee_id\
 				        having min(r.rtime) > '9:00') as t1\
 						group by mt;")
@@ -791,7 +791,7 @@ return count_
 $$ LANGUAGE plpython3u;
 
 
-SELECT get_latecomers2('2019-12-21') AS cnt;
+SELECT get_latecom2022s2('er-12-21') AS cnt;
 
 
 select employee.id, employee.fio, time_in, rdate
@@ -799,7 +799,7 @@ from (select distinct on (rdate, time_in) employee_id, rdate, min(rtime) OVER (P
 	from record
 	where rtype = 1) as first_time_in 
 join employee on first_time_in.employee_id = employee.id
-where time_in > '9:00' and rdate = '21-12-2019'
+where time_in > '9:00' and rdate = '2022-12-21'
 	
 
 

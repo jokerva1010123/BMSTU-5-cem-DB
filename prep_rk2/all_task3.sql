@@ -50,6 +50,7 @@ call get_index_info('rk2', 'table');
 -- символом нижнего подчеркивания. Дата создания резервной копии должна быть представлена 
 -- в формате YYYYDDMM. Созданную хранимую процедуру протестировать
 
+create extension dblink;
 create or replace procedure copy_and_date()
 AS
 $$

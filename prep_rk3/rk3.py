@@ -46,8 +46,8 @@ where id in
 con = PostgresqlDatabase(
     database="postgres",
     user="postgres",
-    password="1830",
-    host="127.0.0.1",  # Адрес сервера базы данных.
+    password="0612",
+    host="localhost",  # Адрес сервера базы данных.
     port=5432	   # Номер порта.
 )
 class BaseModel(Model):
